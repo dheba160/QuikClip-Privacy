@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for QuikClip Chrome Extension">
+    <title>QuikClip - Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: #1a1a2e;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Background pattern similar to QuikClip UI */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(46, 213, 115, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(239, 68, 68, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #16213e;
+            padding: 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header {
+            background: #0f3460;
+            padding: 40px;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .highlight-box {
+            background: rgba(46, 213, 115, 0.1);
+            border: 1px solid rgba(46, 213, 115, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .highlight-box::before {
+            content: '✓';
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #2ed573;
+            color: #16213e;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        h2 {
+            color: #ffffff;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #b0b0b0;
+            line-height: 1.7;
+        }
+        
+        ul {
+            margin-left: 0;
+            margin-bottom: 20px;
+            list-style: none;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            color: #b0b0b0;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2ed573;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+        
+        .no-collect li::before {
+            content: '✕';
+            color: #ee5a52;
+            font-size: 14px;
+            font-weight: bold;
+            left: 3px;
+        }
+        
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+        
+        .demo-button {
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: not-allowed;
+            opacity: 0.8;
+            transition: all 0.2s;
+        }
+        
+        .demo-button.green {
+            background: #2ed573;
+            color: #16213e;
+        }
+        
+        .demo-button.red {
+            background: #ee5a52;
+            color: white;
+        }
+        
+        .demo-button.blue {
+            background: transparent;
+            color: #2ed573;
+            border: 1px solid rgba(46, 213, 115, 0.5);
+        }
+        
+        .contact-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(15, 52, 96, 0.3);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        a {
+            color: #2ed573;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        a:hover {
+            color: #3ff584;
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #0f3460;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 12px 12px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .last-updated {
+            color: #808080;
+            font-size: 0.9em;
+        }
+        
+        .logo {
+            display: inline-block;
+            background: #16213e;
+            padding: 8px 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            font-weight: 600;
+            color: white;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+            }
+            
+            .header, .content {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .demo-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">QuikClip</div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Save tab sets and restore in one click.</p>
+        </div>
+        
+        <div class="content">
+            <div class="highlight-box">
+                <strong>Simple & Clear:</strong> QuikClip doesn't collect, track, or transmit any personal data. Everything stays in your browser.
+            </div>
+            
+            <h2>🚫 What We DON'T Do</h2>
+            <p>QuikClip is built with privacy first. We never:</p>
+            <ul class="no-collect">
+                <li>Track your browsing activity</li>
+                <li>Collect personal information</li>
+                <li>Send data to external servers</li>
+                <li>Use analytics or tracking tools</li>
+                <li>Share information with third parties</li>
+                <li>Monitor your saved tab groups</li>
+                <li>Store data outside your browser</li>
+            </ul>
+            
+            <h2>✅ How QuikClip Works</h2>
+            <p>Everything happens locally in your Chrome browser:</p>
+            <ul>
+                <li><strong>Local Storage:</strong> Tab groups saved using Chrome's storage API</li>
+                <li><strong>Chrome Sync:</strong> Optional syncing through your Google account</li>
+                <li><strong>Zero External Calls:</strong> No network requests to any servers</li>
+                <li><strong>You Control Everything:</strong> Delete any saved group anytime</li>
+            </ul>
+            
+            <div class="button-group">
+                <button class="demo-button green">Group & Save</button>
+                <button class="demo-button blue">Restore</button>
+                <button class="demo-button red">Delete</button>
+            </div>
+            
+            <h2>💾 Data Storage Details</h2>
+            <p>When you save a tab group, QuikClip stores only:</p>
+            <ul>
+                <li>URLs of tabs in the group</li>
+                <li>Custom name for the group</li>
+                <li>Timestamp of when saved</li>
+                <li>Tab count (e.g., "4 tabs")</li>
+            </ul>
+            <p>This data never leaves your device unless you enable Chrome Sync.</p>
+            
+            <h2>🗑️ Deleting Your Data</h2>
+            <p>You have complete control:</p>
+            <ul>
+                <li>Click "Delete" on any saved group to remove it</li>
+                <li>Use "Close All" to clear current tabs</li>
+                <li>Uninstall QuikClip to remove all stored data</li>
+                <li>Clear browser data to wipe everything</li>
+            </ul>
+            
+            <h2>🔑 Required Permissions</h2>
+            <p>QuikClip needs these Chrome permissions to work:</p>
+            <ul>
+                <li><strong>Tabs:</strong> To read and organize your open tabs</li>
+                <li><strong>Storage:</strong> To save groups locally</li>
+                <li><strong>Tab Groups:</strong> To create and manage Chrome tab groups</li>
+            </ul>
+            <p>We use these permissions only for core functionality, nothing else.</p>
+            
+            <h2>📝 Policy Updates</h2>
+            <p>If this policy changes, we'll update the date below. Continuing to use QuikClip means you accept any updates.</p>
+            
+            <div class="contact-section">
+                <h2>📧 Contact</h2>
+                <p>Questions about privacy or QuikClip?</p>
+                <p>Email: <a href="mailto:dheba.contact@gmail.com">dheba.contact@gmail.com</a></p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p class="last-updated">Last Updated: August 31, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
